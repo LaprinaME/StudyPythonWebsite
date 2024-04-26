@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Тесты</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="test.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <h1>Тесты по Python</h1>
+        <ul class="tests">
+            <li class="test" onclick="toggleContent('test1')">Тест 1</li>
+            <div id="test1" class="test-content" style="display: none;">
+                <p>Вопрос 1: Что такое Python?</p>
+                <input type="radio" id="q1a1" name="q1" value="1"><label for="q1a1">Язык программирования</label><br>
+                <input type="radio" id="q1a2" name="q1" value="0"><label for="q1a2">Вид змей</label><br>
+                <input type="radio" id="q1a3" name="q1" value="0"><label for="q1a3">Спецификация</label><br>
+
+                <p>Вопрос 2: Каковы основные преимущества Python?</p>
+                <input type="checkbox" id="q2a1" name="q2" value="1"><label for="q2a1">Простота</label><br>
+                <input type="checkbox" id="q2a2" name="q2" value="1"><label for="q2a2">Многофункциональность</label><br>
+                <input type="checkbox" id="q2a3" name="q2" value="0"><label for="q2a3">Высокая скорость выполнения</label><br>
+
+                <button onclick="checkAnswers('test1')">Проверить</button>
+            </div>
+
+            <li class="test" onclick="toggleContent('test2')">Тест 2</li>
+            <div id="test2" class="test-content" style="display: none;">
+                <p>Вопрос 1: Что такое IDE?</p>
+                <input type="radio" id="q3a1" name="q3" value="1"><label for="q3a1">Интегрированная среда разработки</label><br>
+                <input type="radio" id="q3a2" name="q3" value="0"><label for="q3a2">Интегрированное развитие</label><br>
+                <input type="radio" id="q3a3" name="q3" value="0"><label for="q3a3">Инструмент для разработки</label><br>
+
+                <p>Вопрос 2: Как запустить программу на Python в командной строке?</p>
+                <input type="text" id="q4a1" name="q4"><br>
+
+                <button onclick="checkAnswers('test2')">Проверить</button>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿.container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+    form > div {
+        margin-bottom: 20px;
+    }
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #3aff04; /* Цвет кнопки */
+    color: #ff0460; /* Цвет текста кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    button:hover {
+        background-color: #bfff04; /* Цвет кнопки при наведении */
+        color: #3aff04; /* Цвет текста кнопки при наведении */
+    }
+
+img {
+    width: 150px;
+    margin-top: 20px;
+}

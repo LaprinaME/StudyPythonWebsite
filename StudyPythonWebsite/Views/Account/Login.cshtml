@@ -1,0 +1,74 @@
+﻿@using StudyPythonWebsite.ViewModels
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model LoginViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <style>
+        body {
+            font-family: 'Anonymous Pro', monospace;
+            background-color: #343946ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #ff661c;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            width: 100%;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #3aff04;
+            color: #ff0460;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #bfff04;
+            color: #3aff04;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Вход</h2>
+
+        <form asp-action="Login" >
+            <div style="color: #ff0000"></div>
+            <div>
+                <label asp-for="Username"></label>
+                <input asp-for="Username" style="padding: 10px; width: 100%; border-radius: 20px; border: none; margin-bottom: 20px;" />
+                <span asp-validation-for="Username" style="color: #ff0000"></span>
+            </div>
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" style="padding: 10px; width: 100%; border-radius: 20px; border: none; margin-bottom: 20px;" />
+                <span asp-validation-for="Password" style="color: #ff0000"></span>
+            </div>
+            <!-- Добавим скрытое поле для хранения роли пользователя -->
+            <!-- <input type="hidden" asp-for="Role" /> -->
+
+            <button type="submit" style="padding: 10px 20px; border: none; border-radius: 20px; background-color: #3aff04; color: #ff0460; cursor: pointer; transition: background-color 0.3s, color 0.3s;">Войти</button>
+        </form>
+    </div>
+</body>
+</html>
